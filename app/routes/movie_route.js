@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const Movie=mongoose.model('Search_movie',MovieStructure);
 router.get('/',(req,res)=>{
-  res.send("Movie Api")
+  res.send("Movie Apis")
 })
 
 router.get('/title',auth,async(req,res) => {
