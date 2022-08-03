@@ -1,0 +1,73 @@
+const mongoose=require('mongoose');
+const movieSchema=new mongoose.Schema({
+Title:{
+        type:String,
+        required:true
+    },
+    Year:{
+        type:Number,
+        required:true
+    },
+    Rated:{
+        type:String,
+        required:true
+    },
+    Released:{
+        type:String,
+        required:true
+    },
+    Runtime:{
+        type:String,
+        required:true
+    },
+    Genre:{
+        type:String,
+        required:true
+    },
+    Director:{
+        type:String,
+        required:true
+    },
+    Awards:{
+        type:String,
+        required:true
+    },
+    Ratings:[{
+        Source:{
+        type:String,
+        required:true
+    },
+    Value:{
+        type:String,
+        required:true
+    }
+}],
+
+imdbRating:{
+        type:String,
+        required:true
+    },
+    imdbVotes:{
+        type:String,
+        required:true
+    },
+    imdbID:{
+        type:mongoose.Schema.Types.ObjectId
+        
+    },
+    Type:{
+        type:String,
+        required:true
+    },
+    BoxOffice:{
+        type:String,
+        required:true
+    },
+    Production:{
+        type:String,
+        required:true
+    }
+});
+const Movie=mongoose.model('moviedb',movieSchema);
+exports.MovieStructure=movieSchema;
+exports.Mov=Movie;
